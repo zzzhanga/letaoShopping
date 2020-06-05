@@ -1,0 +1,27 @@
+/* pages/search/index.wxss */
+
+.seach-container  {
+
+}
+
+.top-search {
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  padding: 5px;
+  background-color: aliceblue;
+}
+
+.top-search input {
+  flex: 4;
+  /* border:2px solid red; */
+  background-color: #ffffff;
+  height: 40px;
+  margin-right: 5px;
+  
+}
+
+.top-search button {
+  /* flex: 1; */
+  margin-left: 5px;
+} 

@@ -1,0 +1,82 @@
+/* pages/category/index.wxss */
+page {
+  height: 100%;
+}
+.cates {
+  height: 100%;
+}
+
+.container  {
+  height: calc(100vh-90rpx);
+  display: flex;
+}
+.leftMenu {
+  flex: 2;
+  /* background-color: aqua; */
+ 
+} 
+
+.leftMenu .menu_item {
+   height: 80rpx;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   
+
+}
+.active {
+  color: var(--themeColor);
+  border-left: 5rpx solid  currentColor; 
+   /* currentColor 表示当前字体的颜色*/
+
+}
+
+
+.rightMenu {
+  flex: 5;
+  /* background-color: pink; */
+}
+
+/* .goods_container {
+
+} */
+
+.goods_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin:10rpx 0;
+  
+}
+
+.goods_title .deltirmer {
+  padding: 0 10rpx;
+}
+
+.goods_content {
+  display: flex;
+  flex-wrap: wrap;  
+ 
+  /* 不换行 */
+  
+}
+.goods_content   navigator {
+  width: 33.33%;
+
+  text-align: center;
+
+}
+
+.goods_content   navigator image {
+  width: 50%;
+}
+ 
+
+
+
+
+
+
+
+
+

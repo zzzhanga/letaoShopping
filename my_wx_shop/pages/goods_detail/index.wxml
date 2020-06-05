@@ -1,0 +1,71 @@
+<view class='detial-container'>
+<!-- 轮播图开始 -->
+  <swiper autoplay="true"  indicator-dots="true" 
+   circular="true"
+  >
+    <swiper-item wx:for="{{detialData.pics}}" wx:key="pics_id"
+    bindtap="previewImg"
+    data-img="{{item.pics_mid}}"
+    >
+      <image src="{{item.pics_mid}}" mode="widthFix"></image>
+    </swiper-item>
+  </swiper>   
+
+<!-- 轮播图结束 -->
+
+<!-- 价格开始 -->
+
+<view class="detail_price">￥{{detialData.goods_price}}</view>
+<!-- 价格结束 -->
+<!-- 文字描述开始 -->
+<view class="text_desc">
+  <view class="leftText">
+  <text class="goods_name">{{detialData.goods_name}}</text>
+  </view>
+    <view class="rightText">
+     <view class=" iconfont icon-shoucang"></view>
+     <view class="shoucang">收藏</view>
+    </view>
+</view>
+<!-- 文字结束开始 -->
+
+<!-- 图文描述开始 -->
+   <view>
+     <view class="img_text_desc">图文详情描述</view>
+     <rich-text nodes="{{detialData.goods_introduce}}"></rich-text>
+   </view>
+<!-- 图文描述结束 -->
+
+
+<!-- 底部工具栏开始 -->
+
+<view class="btm_tool">
+    <view class="tool_item">
+      <view class="iconfont icon-kefu"></view>
+      <view>客服</view>
+      <button open-type="contact"></button>
+    </view>
+    <view class="tool_item">
+      <view class="iconfont icon-yixianshi-"></view>
+      <view>分享</view>
+      <button open-type="share"></button>
+    </view>
+    <navigator open-type="switchTab" url="/pages/cart/index" class="tool_item">
+      <view class="iconfont icon-gouwuche"></view>
+      <view>购物车</view>
+    </navigator>
+    <view class="tool_item btn_cart " bindtap="handleCartAdd">
+    加入购物车
+    </view>
+    <view class="tool_item btn_buy">
+      立即购买
+    </view>
+</view>
+
+<!-- 底部工具栏开始 -->
+
+
+
+
+</view>
+

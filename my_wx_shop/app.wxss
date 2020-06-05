@@ -1,0 +1,8 @@
+@import "./styles/reset.wxss";
+@import "./styles/iconfont.wxss";
+
+page {
+  font-size: 28rpx;
+  --themeColor:#eb4450;
+}
+

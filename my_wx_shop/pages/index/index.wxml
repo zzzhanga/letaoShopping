@@ -1,0 +1,74 @@
+<!-- 总共4个组件   搜索  轮播图  分类导航  商品展示 -->
+<view class="home-index">
+<!-- 搜索开始 -->
+<SearchInput></SearchInput>
+<!-- 搜索结束 -->
+
+<!-- 轮播图开始 -->
+ <swiper class="swiper-index" autoplay="true" indicator-dots="true" circular="true" duration="500">
+  <swiper-item  wx:for="{{swiperList}}" wx:key="goods_id">
+    <image class="img"  src="{{item.image_src}}" mode="widthFix"></image>
+  </swiper-item>
+ </swiper>
+
+<!-- 轮播图结束 -->
+
+<!-- 导航栏开始 -->
+
+ <!-- 导航 开始    url="/pages/category/index" -->
+  <view class="index_cate">
+    <navigator 
+    wx:for="{{navList}}"
+    wx:key="name"
+    open-type="switchTab"
+    >
+    <image mode="widthFix" src="{{item.image_src}}"></image>
+  </navigator>
+  </view>
+<!-- 导航栏结束 -->
+
+
+<!-- 楼层html开始 -->
+<!-- 值	说明	最低版本
+scaleToFill	缩放模式，不保持纵横比缩放图片，使图片的宽高完全拉伸至填满 image 元素	
+aspectFit	缩放模式，保持纵横比缩放图片，使图片的长边能完全显示出来。也就是说，可以完整地将图片显示出来。	
+aspectFill	缩放模式，保持纵横比缩放图片，只保证图片的短边能完全显示出来。也就是说，图片通常只在水平或垂直方向是完整的，另一个方向将会发生截取。 -->
+<view class="floor-index">
+  <view   
+  wx:for="{{floorList}}" 
+  wx:for-index="index1" wx:for-item="item1"
+  wx:key="floor_title.image_src" >
+  <!-- 楼层标题 -->
+      <view class="floor-title" > 
+      <image src='{{item1.floor_title.image_src}}' mode="widthFix" ></image>
+      </view>
+  <!-- 楼层内容 -->
+      <view class="floor-content">
+          <navigator   
+          wx:for="{{item1.product_list}}" 
+            wx:key="name"
+            wx:for-index="index2" 
+            wx:for-item="item2"
+             open-type="{{item2.open_type}}">
+            <image src="{{item2.image_src}}"   mode="{{index2===0?'widthFix':'scaleToFill'}}"></image>
+          </navigator> 
+      </view>
+
+    </view>
+</view>
+<!-- 楼层html结束 -->
+
+
+</view>
+
+
+
+<!-- 使⽤tabbar 实现底部导航功能
+image
+
+使⽤⾃定义组件的⽅式 实现 头部搜索框
+image
+
+加载 轮播图 数据
+加载 导航 数据
+加载 楼层 数据 -->

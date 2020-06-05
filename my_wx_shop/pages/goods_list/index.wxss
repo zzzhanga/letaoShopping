@@ -1,0 +1,40 @@
+/* pages/goods_list/index.wxss */
+
+.goods_content_list  navigator  {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+}
+
+
+
+
+.leftImg {
+  flex: 1;
+}
+.leftImg image {
+  width: 100%;
+}
+
+.rightText {
+  flex: 3;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  
+  font-size: 26rpx;
+
+}
+.rightText .goods_name {
+
+display: -webkit-box;
+overflow: hidden;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 2;  /*表示演示几行*/
+
+}
+
+
+
+.price {
+  color: var(--themeColor);
+}
